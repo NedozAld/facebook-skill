@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "facebook-skill",
+  "description": "Paquete de skills de Facebook para Claude",
+  "owner": { "name": "NedozAld", "url": "https://github.com/NedozAld" },
+  "plugins": [
+    {
+      "name": "facebook-agent",
+      "description": "Diez skills de Claude para manejar una página de Facebook: detector de engagement bait, ganchos puntuados para Reels, lector de estadísticas de Meta Business Suite, análisis de tu nicho y cortes de Reels.",
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/NedozAld/facebook-skill"
+    }
+  ]
+}

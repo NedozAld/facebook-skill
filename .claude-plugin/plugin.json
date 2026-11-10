@@ -1,0 +1,10 @@
+{
+  "name": "facebook-agent",
+  "description": "Diez skills de Claude para manejar una página de Facebook, en español e inglés: publicaciones revisadas contra el engagement bait y el corte de 'Ver más', guiones de Reels con ganchos puntuados, lectura de las estadísticas de Meta Business Suite contra la mediana de tu propia página, análisis de lo que funciona en tu nicho, cortes de Reels desde un video largo, lista de cortes de edición, comentarios, grupos, planificación semanal y auditoría.",
+  "version": "1.0.0",
+  "author": { "name": "NedozAld", "url": "https://github.com/NedozAld" },
+  "homepage": "https://github.com/NedozAld/facebook-skill",
+  "repository": "https://github.com/NedozAld/facebook-skill",
+  "license": "MIT",
+  "keywords": ["facebook", "reels", "meta", "redes sociales", "social media", "contenido", "engagement", "español"]
+}

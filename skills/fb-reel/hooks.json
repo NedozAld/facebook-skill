@@ -1,0 +1,246 @@
+{
+ "version": "1.0",
+ "nota": "16 fórmulas de gancho para Facebook (Reels y primera línea de publicaciones). En un Reel el gancho son los primeros 3 segundos: lo que se dice y lo que se lee en pantalla. En una publicación es lo que se ve antes de 'Ver más'. Un gancho hace tres cosas: confirma por qué la persona se detuvo, abre una pregunta que no puede cerrar sola y demuestra que la respuesta existe. Los patrones 'match' se comparan contra el texto en minúsculas y SIN tildes, en español y en inglés. Los ejemplos son ilustrativos: nunca uses una cifra que no puedas mostrar.",
+ "reglas": [
+  "Una sola idea. Un gancho con dos promesas no cumple ninguna.",
+  "Concreto gana a grande: 'de 40 a 900 pedidos en tres meses' gana a 'crecimiento brutal'.",
+  "Si prometes algo que se ve, muéstralo en los primeros 5 segundos.",
+  "Nunca abras diciendo quién eres ni pidiendo que te sigan. Todavía no te lo has ganado.",
+  "El texto en pantalla no repite lo que dices: lo completa."
+ ],
+ "hooks": [
+  {
+   "id": "la-cifra",
+   "nombre": "La cifra",
+   "name_en": "The Statistic",
+   "forma": "Un número que la persona no conocía, dicho sin adornos, y luego la consecuencia.",
+   "ejemplo": "8 de cada 10 negocios del barrio publican sin foto del producto. Mira lo que pasa cuando sí la pones.",
+   "falla_cuando": "La cifra es vaga o no puedes decir de dónde sale.",
+   "match": [
+    "\\b\\d+([.,]\\d+)?\\s?%",
+    "\\b\\d+ (de cada|out of|in) \\d+\\b",
+    "\\b\\d{1,3}([.,]\\d{3})+\\b"
+   ]
+  },
+  {
+   "id": "el-error",
+   "nombre": "El error",
+   "name_en": "The Mistake",
+   "forma": "Nombra algo que la persona probablemente está haciendo mal, sin insultarla.",
+   "ejemplo": "Si publicas tus precios en la foto, estás cometiendo el error que más ventas te quita.",
+   "falla_cuando": "El error es tan obvio que nadie se siente aludido.",
+   "match": [
+    "\\b(estas|esta|estan) (haciendo|cometiendo|usando)\\b",
+    "\\bel error (que|mas|numero)\\b",
+    "\\bdeja de\\b",
+    "\\byou('re| are) (probably |still )?(doing|making)\\b",
+    "\\bstop (doing )?\\b",
+    "\\bmistake\\b"
+   ]
+  },
+  {
+   "id": "contra-la-corriente",
+   "nombre": "Contra la corriente",
+   "name_en": "Contrarian Flip",
+   "forma": "Lo que todos repiten, y por qué no es así.",
+   "ejemplo": "Todos dicen que hay que publicar todos los días. Yo publiqué tres veces por semana y me fue mejor.",
+   "falla_cuando": "Llevas la contraria sin pruebas. Eso es polémica, no gancho.",
+   "match": [
+    "\\btodos (dicen|creen|piensan|te dicen)\\b",
+    "\\bnadie (te dice|habla|cuenta|te cuenta)\\b",
+    "\\b(es|esta) (mal|equivocado|mentira)\\b",
+    "\\beveryone (says|thinks|tells you)\\b",
+    "\\bnobody (tells|talks about)\\b",
+    "\\bis (actually )?wrong\\b"
+   ]
+  },
+  {
+   "id": "lo-probe",
+   "nombre": "Lo probé",
+   "name_en": "I Tried It",
+   "forma": "Hiciste el experimento para que la persona no tenga que hacerlo.",
+   "ejemplo": "Probé publicar a las 6 de la mañana durante 14 días. Esto fue lo que pasó.",
+   "falla_cuando": "No muestras el resultado, o el resultado no sorprende.",
+   "match": [
+    "\\b(probe|intente|pase|gaste|deje|hice) .{0,30}\\b(dias|semanas|meses)\\b",
+    "\\bdurante \\d+ (dias|semanas|meses)\\b",
+    "\\bpara que (tu )?no (tengas|lo tengas)\\b",
+    "\\bi (tried|spent|tested|gave)\\b",
+    "\\bfor \\d+ (days|weeks|months)\\b",
+    "\\bso you don'?t have to\\b"
+   ]
+  },
+  {
+   "id": "antes-y-despues",
+   "nombre": "Antes y después",
+   "name_en": "Before and After",
+   "forma": "Dos estados, uno al lado del otro, y la pregunta de qué pasó en medio.",
+   "ejemplo": "Así se veía mi local en enero. Así se ve hoy. Lo único que cambié fue la luz.",
+   "falla_cuando": "La diferencia no se ve en el primer segundo.",
+   "match": [
+    "\\bantes\\b.*\\b(ahora|despues|hoy)\\b",
+    "\\b(pase|pasamos|paso) de .{1,40} a\\b",
+    "\\basi (era|estaba|se veia)\\b",
+    "\\bbefore\\b.*\\bafter\\b",
+    "\\bwent from .* to\\b",
+    "\\bused to\\b"
+   ]
+  },
+  {
+   "id": "el-reloj",
+   "nombre": "El reloj",
+   "name_en": "The Clock",
+   "forma": "Promete el resultado en un tiempo concreto y cúmplelo.",
+   "ejemplo": "En 30 segundos te enseño a sacar una foto de producto con el celular que parece de estudio.",
+   "falla_cuando": "El video dura bastante más que el tiempo que prometiste.",
+   "match": [
+    "\\ben (menos de )?\\d+ (segundos|minutos|horas)\\b",
+    "\\bal final de este (video|reel)\\b",
+    "\\bin (the next |under )?\\d+ (seconds|minutes|hours)\\b",
+    "\\bby the end of this (video|reel)\\b"
+   ]
+  },
+  {
+   "id": "la-pregunta",
+   "nombre": "La pregunta",
+   "name_en": "The Question",
+   "forma": "La pregunta que la persona ya se hace, con sus palabras.",
+   "ejemplo": "¿Por qué tu publicación tiene 3 me gusta y la de tu competencia 300, si vendes lo mismo?",
+   "falla_cuando": "Se puede responder con sí o no, o la respuesta es obvia.",
+   "match": [
+    "^\\s*¿",
+    "\\?\\s*$",
+    "^(por que|como|cual|cuanto|donde|why|how|what|which|should|can|do|does|is)\\b"
+   ]
+  },
+  {
+   "id": "la-advertencia",
+   "nombre": "La advertencia",
+   "name_en": "The Warning",
+   "forma": "Algo que no debe hacer, y lo que le cuesta si lo hace.",
+   "ejemplo": "No pagues publicidad en Facebook antes de revisar estas tres cosas de tu página.",
+   "falla_cuando": "Asusta sin dar la salida.",
+   "match": [
+    "\\b(no|nunca) (hagas|compres|pagues|publiques|uses|firmes|subas)\\b",
+    "\\bcuidado con\\b",
+    "\\bantes de (que )?(compres|pagues|publiques|firmes|subas)\\b",
+    "\\b(don'?t|never) (buy|pay|post|use|sign|do)\\b",
+    "\\bbefore you\\b"
+   ]
+  },
+  {
+   "id": "el-resultado-ajeno",
+   "nombre": "El resultado de otro",
+   "name_en": "Someone Else's Result",
+   "forma": "El resultado de una persona o negocio concreto, y cómo lo logró.",
+   "ejemplo": "Esta panadería de Cuenca vende todo antes del mediodía. Y no paga publicidad.",
+   "falla_cuando": "No puedes nombrar a quién, o no tienes su permiso.",
+   "match": [
+    "\\b(este|esta) (senor|senora|chico|chica|negocio|pagina|tienda|panaderia|restaurante|emprendedor|emprendedora)\\b",
+    "\\bthis (guy|girl|page|shop|business|creator)\\b",
+    "\\b(logro|consiguio|vendio) .{0,30}\\b(en|con)\\b"
+   ]
+  },
+  {
+   "id": "la-lista",
+   "nombre": "La lista",
+   "name_en": "The List",
+   "forma": "Un número de cosas, y la promesa de que la última es la mejor.",
+   "ejemplo": "3 cosas que nunca debes poner en la portada de tu página. La tercera la hace casi todo el mundo.",
+   "falla_cuando": "Son más de 5, o se pueden adivinar.",
+   "match": [
+    "\\b\\d+ (cosas|formas|maneras|errores|trucos|razones|pasos|ideas|consejos|tips|senales)\\b",
+    "\\b(tres|cuatro|cinco) (cosas|formas|maneras|errores|trucos|razones|pasos|ideas|consejos)\\b",
+    "\\b\\d+ (things|ways|mistakes|tips|reasons|steps|ideas|signs)\\b"
+   ]
+  },
+  {
+   "id": "la-revelacion",
+   "nombre": "La revelación",
+   "name_en": "The Reveal",
+   "forma": "Muestras el resultado primero y explicas después.",
+   "ejemplo": "Mira esta foto. La saqué con un celular de hace cinco años y una cartulina blanca.",
+   "falla_cuando": "Lo que muestras no impresiona sin explicación.",
+   "match": [
+    "\\bte (voy a )?(ensen|muestr|mostrar)",
+    "\\baqui (esta|tienes|te dejo)\\b",
+    "\\bmira (esto|esta|este|lo que)\\b",
+    "\\bi'?m going to show you\\b",
+    "\\bhere'?s (the|exactly|how)\\b",
+    "\\bwatch (this|what)\\b"
+   ]
+  },
+  {
+   "id": "la-comparacion",
+   "nombre": "La comparación",
+   "name_en": "The Comparison",
+   "forma": "Dos opciones que la persona duda entre elegir, y un ganador claro.",
+   "ejemplo": "Reel de 15 segundos contra Reel de 60 segundos: subí los dos el mismo día con el mismo tema.",
+   "falla_cuando": "No eliges ganador.",
+   "match": [
+    "\\bvs\\.?\\b",
+    "\\b(contra|versus)\\b",
+    "\\b(mejor|peor) que\\b",
+    "\\b(better|worse) than\\b"
+   ]
+  },
+  {
+   "id": "la-historia",
+   "nombre": "La historia",
+   "name_en": "The Origin",
+   "forma": "Un momento concreto del pasado que explica algo de hoy.",
+   "ejemplo": "Hace 2 años vendía empanadas en la puerta de mi casa. Esto es lo que aprendí del primer mes.",
+   "falla_cuando": "Empiezas demasiado atrás. Arranca en el momento que cambió algo.",
+   "match": [
+    "\\bhace \\d+ (anos|meses|semanas)\\b",
+    "\\bcuando (tenia|empece|abri)\\b",
+    "\\btodo (empezo|comenzo)\\b",
+    "\\bnunca (pense|imagine|crei)\\b",
+    "\\b\\d+ (years|months) ago\\b",
+    "\\bit all started\\b"
+   ]
+  },
+  {
+   "id": "lo-local",
+   "nombre": "Lo local",
+   "name_en": "The Local",
+   "forma": "Nombra el lugar o la comunidad. En Facebook, lo cercano detiene el scroll.",
+   "ejemplo": "Si vives en el norte de Quito, esto te va a ahorrar una hora de tráfico el sábado.",
+   "falla_cuando": "Lo usas para un tema que no tiene nada de local.",
+   "match": [
+    "\\b(en|de) (mi|nuestro|nuestra|tu) (barrio|ciudad|pueblo|zona|comunidad|sector|parroquia)\\b",
+    "\\bsi (vives|eres) (en|de)\\b",
+    "\\bvecinos?\\b",
+    "\\b(in|from) (our|my|your) (town|city|neighborhood|area)\\b",
+    "\\bneighbors?\\b"
+   ]
+  },
+  {
+   "id": "la-prueba",
+   "nombre": "La prueba",
+   "name_en": "The Receipt",
+   "forma": "Enseñas la evidencia: la captura, la factura, el número real.",
+   "ejemplo": "Esta es la captura de mis ventas de la semana pasada. Te explico qué publiqué cada día.",
+   "falla_cuando": "La prueba no se puede leer en un celular.",
+   "match": [
+    "\\b(captura|factura|recibo|comprobante|prueba)s?\\b",
+    "\\b(mis|los) (numeros|resultados) (reales)?\\b",
+    "\\b(receipts?|screenshot|proof)\\b"
+   ]
+  },
+  {
+   "id": "para-ti",
+   "nombre": "Esto es para ti",
+   "name_en": "The Direct Address",
+   "forma": "Llamas a una persona concreta por su situación.",
+   "ejemplo": "Si tienes un negocio de comida y no sabes qué publicar esta semana, esto es para ti.",
+   "falla_cuando": "La descripción es tan amplia que le sirve a todos y no llama a nadie.",
+   "match": [
+    "^si (tu |usted )?(tienes|tiene|eres|es|vendes|vende|trabajas|quieres|estas)\\b",
+    "\\besto es para (ti|vos|usted|quien)\\b",
+    "^if you\\b",
+    "\\bthis is for (you|anyone)\\b"
+   ]
+  }
+ ]
+}
